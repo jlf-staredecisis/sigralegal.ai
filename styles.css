@@ -240,12 +240,14 @@ body {
   font-weight: 600;
   font-size: 0.95rem;
   line-height: 1.6;
+  order: 2;
 }
 
 .hero-sub .bad {
   color: var(--gray-600);
   font-size: 0.95rem;
   line-height: 1.6;
+  order: 1;
 }
 
 .hero-brand {
