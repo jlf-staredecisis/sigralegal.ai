@@ -9,7 +9,7 @@ interface WhyNowSectionProps {
 export function WhyNowSection({ isExpanded, setIsExpanded }: WhyNowSectionProps) {
   return (
     <section 
-      className="px-6 lg:px-20 py-20 lg:py-24"
+      className="px-6 lg:px-20 py-20 lg:py-28"
       style={{ background: '#0a0a0a', borderBottom: '1px solid rgba(245,242,237,0.06)' }}
     >
       <div className="max-w-4xl mx-auto">
@@ -48,7 +48,7 @@ export function WhyNowSection({ isExpanded, setIsExpanded }: WhyNowSectionProps)
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
                 style={{ overflow: 'hidden' }}
               >
-                <div className="pt-10 lg:pt-12 space-y-10 lg:space-y-8">
+                <div className="pt-10 lg:pt-12 pb-4 lg:pb-6 space-y-10 lg:space-y-8">
                   <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
                     For years, AI-generated legal work faced no formal reliability standard. That era is ending — and it doesn't matter which mechanism gets there first.
                   </p>

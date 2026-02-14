@@ -10,7 +10,7 @@ interface ProblemSectionProps {
 export function ProblemSection({ isExpanded, setIsExpanded }: ProblemSectionProps) {
   return (
     <section 
-      className="px-6 lg:px-20 py-20 lg:py-24"
+      className="px-6 lg:px-20 py-20 lg:py-28"
       style={{ background: '#000000', borderBottom: '1px solid rgba(245,242,237,0.06)' }}
     >
       <div className="max-w-4xl mx-auto">
@@ -51,7 +51,7 @@ export function ProblemSection({ isExpanded, setIsExpanded }: ProblemSectionProp
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
                 style={{ overflow: 'hidden' }}
               >
-                <div className="pt-10 lg:pt-12 space-y-10 lg:space-y-8">
+                <div className="pt-10 lg:pt-12 pb-4 lg:pb-6 space-y-10 lg:space-y-8">
                   <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
                     Current legal AI tools hallucinate--meaning that they confidently create fake legal citations, generate imaginary quotations, get holdings wrong, and so on. And they insist that they're correct even if you happen to catch the error.
                   </p>
