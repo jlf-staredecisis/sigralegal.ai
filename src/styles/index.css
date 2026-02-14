@@ -2,18 +2,15 @@
 @import './tailwind.css';
 @import './theme.css';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Note: Tailwind v4's @layer base already provides the box-sizing/margin/padding
+   reset on *. Do NOT add an unlayered * reset here — unlayered styles override
+   all @layer utilities (like px-12, py-32) per the CSS cascade spec. */
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
