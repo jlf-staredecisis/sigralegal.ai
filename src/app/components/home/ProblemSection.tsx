@@ -10,7 +10,7 @@ interface ProblemSectionProps {
 export function ProblemSection({ isExpanded, setIsExpanded }: ProblemSectionProps) {
   return (
     <section 
-      className="px-6 lg:px-20 py-16 lg:py-20"
+      className="px-6 lg:px-20 py-20 lg:py-28"
       style={{ background: '#000000', borderBottom: '1px solid rgba(245,242,237,0.1)' }}
     >
       <div className="max-w-4xl mx-auto">

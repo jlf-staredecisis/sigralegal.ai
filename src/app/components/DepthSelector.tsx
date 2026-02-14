@@ -35,7 +35,7 @@ export function DepthSelector({ currentMode, onModeChange }: DepthSelectorProps)
 
   return (
     <section 
-      className="px-6 lg:px-20 py-16 lg:py-24 pb-8 lg:pb-10"
+      className="px-6 lg:px-20 pt-24 lg:pt-36 pb-8 lg:pb-10"
       style={{ background: '#0a0a0a', borderTop: '1px solid rgba(245,242,237,0.08)', position: 'relative' }}
     >
       <div className="max-w-6xl mx-auto">
