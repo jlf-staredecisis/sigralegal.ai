@@ -1,0 +1,40 @@
+@theme {
+  /* Color tokens */
+  --color-background: #0a0a0a;
+  --color-surface: #000000;
+  --color-text-primary: #f5f2ed;
+  --color-text-secondary: #d1cbc3;
+  --color-text-muted: #a8a29e;
+  --color-text-subtle: #78716c;
+  --color-accent: #c4431a;
+  --color-accent-hover: #9a3415;
+  --color-blue-accent: rgba(123, 177, 255, 0.3);
+
+  /* Typography */
+  --font-serif: 'Instrument Serif', serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Breakpoints - ensure lg is correct */
+  --breakpoint-lg: 64rem;
+
+  /* Override container sizes to match design intent */
+  --container-3xl: 48rem;
+  --container-4xl: 56rem;
+  --container-6xl: 72rem;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
