@@ -56,12 +56,6 @@ export function CapabilitiesSection({ mode }: CapabilitiesSectionProps) {
     }
   ];
 
-  const getContent = (cap: typeof capabilities[0]) => {
-    if (mode === 'glance') return cap.glance;
-    if (mode === 'practice') return cap.practice;
-    return cap.hood;
-  };
-
   return (
     <section 
       className="px-6 lg:px-20 py-20 lg:py-28"
@@ -101,9 +95,26 @@ export function CapabilitiesSection({ mode }: CapabilitiesSectionProps) {
                   <h3 className="mb-4" style={{ fontFamily: "'Instrument Serif', serif", fontSize: 'clamp(1.25rem, 3vw, 1.75rem)', fontWeight: 400, color: '#f5f2ed', lineHeight: 1.3, letterSpacing: '-0.01em' }}>
                     {cap.heading}
                   </h3>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: mode === 'glance' ? '1.15rem' : '1.05rem', color: mode === 'glance' ? '#f5f2ed' : '#d1cbc3', lineHeight: 1.8, fontWeight: mode === 'glance' ? 400 : 300 }}>
-                    {getContent(cap)}
-                  </p>
+                  {/* All three depth modes render; only the selected one is
+                      displayed. Keeps every mode's copy in the prerendered
+                      HTML, since a crawler never clicks the depth selector.
+                      The visible paragraph keeps its exact previous styling. */}
+                  {(['glance', 'practice', 'hood'] as const).map((depth) => (
+                    <p
+                      key={depth}
+                      style={{
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: depth === 'glance' ? '1.15rem' : '1.05rem',
+                        color: depth === 'glance' ? '#f5f2ed' : '#d1cbc3',
+                        lineHeight: 1.8,
+                        fontWeight: depth === 'glance' ? 400 : 300,
+                        display: mode === depth ? 'block' : 'none'
+                      }}
+                      aria-hidden={mode !== depth}
+                    >
+                      {cap[depth]}
+                    </p>
+                  ))}
                 </div>
               </motion.div>
             ))}

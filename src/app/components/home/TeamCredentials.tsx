@@ -142,19 +142,6 @@ function TeamCredentialsContent() {
             Jeffrey L. Fazio
           </h3>
 
-          <p
-            className="mb-6"
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: '0.95rem',
-              color: '#a8a29e',
-              lineHeight: 1.6,
-              fontWeight: 300
-            }}
-          >
-            Complex litigation, discovery failure analysis
-          </p>
-
           {/* Credibility Bullets */}
           <ul className="mb-8 space-y-3">
             {[
@@ -178,7 +165,7 @@ function TeamCredentialsContent() {
                   className="absolute left-0"
                   style={{ color: '#c4431a' }}
                 >
-                  —
+                  •
                 </span>
                 {item}
               </li>

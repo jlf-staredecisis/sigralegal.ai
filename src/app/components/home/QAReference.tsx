@@ -389,6 +389,26 @@ export function QAReference({ currentMode, onModeChange }: QAReferenceProps) {
             </div>
           </motion.div>
         </AnimatePresence>
+
+        {/* Q&A for the depth modes that are not currently selected. Present in
+            the DOM — and therefore in the prerendered HTML — but never shown.
+            A crawler cannot click the depth selector, so without this only one
+            of the three modes' questions and answers would be indexable. The
+            visible panel above is unchanged. */}
+        <div style={{ display: 'none' }} aria-hidden="true">
+          {(Object.keys(qaContent) as Array<keyof typeof qaContent>)
+            .filter((depth) => depth !== currentMode)
+            .map((depth) => (
+              <div key={depth}>
+                {qaContent[depth].qa.map((item, index) => (
+                  <div key={index}>
+                    <h4>{item.question}</h4>
+                    <p>{item.answer}</p>
+                  </div>
+                ))}
+              </div>
+            ))}
+        </div>
       </div>
     </section>
   );

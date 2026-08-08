@@ -1,6 +1,27 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 
+/** The expandable body copy. Single definition, rendered either inside the
+ *  animated panel (when open) or inside a display:none block (when closed). */
+function ProblemDetail() {
+  return (
+    <div className="pt-10 lg:pt-12 pb-4 lg:pb-6 space-y-10 lg:space-y-8">
+      <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
+        Current legal AI tools hallucinate--meaning that they confidently create fake legal citations, generate imaginary quotations, get holdings wrong, and so on. And they insist that they're correct even if you happen to catch the error.
+      </p>
+      <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
+        This is not an occasional problem. As Stanford RegLabs found, Lexis+AI and Westlaw CoCounsel hallucinate at 17% and 33%, respectively.
+      </p>
+      <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
+        Think about that: the best that the "specialized AI tools" can do is err nearly one out of five times. And consumer-grade AI such as ChatGPT and Gemini are even worse. Much worse. This is why courts have issued approximately 1,000 sanctions orders--ranging from monetary penalties and State Bar referrals to outright dismissal--and that number is growing every day.
+      </p>
+      <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
+        But don't take our word for it. See for yourself: <a href="https://www.damiencharlotin.com/hallucinations/" target="_blank" rel="noopener noreferrer" style={{ color: '#c4431a', textDecoration: 'underline' }}>https://www.damiencharlotin.com/hallucinations/</a>.
+      </p>
+    </div>
+  );
+}
+
 interface ProblemSectionProps {
   isExpanded: boolean;
   setIsExpanded: (expanded: boolean) => void;
@@ -51,23 +72,21 @@ export function ProblemSection({ isExpanded, setIsExpanded }: ProblemSectionProp
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
                 style={{ overflow: 'hidden' }}
               >
-                <div className="pt-10 lg:pt-12 pb-4 lg:pb-6 space-y-10 lg:space-y-8">
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-                    Current legal AI tools hallucinate--meaning that they confidently create fake legal citations, generate imaginary quotations, get holdings wrong, and so on. And they insist that they're correct even if you happen to catch the error.
-                  </p>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-                    This is not an occasional problem. As Stanford RegLabs found, Lexis+AI and Westlaw CoCounsel hallucinate at 17% and 33%, respectively.
-                  </p>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-                    Think about that: the best that the "specialized AI tools" can do is err nearly one out of five times. And consumer-grade AI such as ChatGPT and Gemini are even worse. Much worse. This is why courts have issued approximately 1,000 sanctions orders--ranging from monetary penalties and State Bar referrals to outright dismissal--and that number is growing every day.
-                  </p>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-                    But don't take our word for it. See for yourself: <a href="https://www.damiencharlotin.com/hallucinations/" target="_blank" rel="noopener noreferrer" style={{ color: '#c4431a', textDecoration: 'underline' }}>https://www.damiencharlotin.com/hallucinations/</a>.
-                  </p>
-                </div>
+                <ProblemDetail />
               </motion.div>
             )}
           </AnimatePresence>
+
+          {/* Same copy, never displayed, so the prerendered HTML carries it for
+              crawlers and non-JS clients. Rendered unconditionally and kept as
+              a plain sibling: the AnimatePresence panel above is untouched
+              original code, and nothing here mounts or unmounts while its
+              enter/exit animation is running. Shares ProblemDetail with the
+              panel so the two cannot drift apart. In the prerendered (always
+              collapsed) HTML the panel is absent, so the copy appears once. */}
+          <div style={{ display: 'none' }} aria-hidden="true">
+            <ProblemDetail />
+          </div>
         </motion.div>
       </div>
     </section>

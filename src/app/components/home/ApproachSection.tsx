@@ -1,4 +1,25 @@
 import { motion, AnimatePresence } from 'motion/react';
+
+/** The expandable body copy. Single definition, rendered either inside the
+ *  animated panel (when open) or inside a display:none block (when closed). */
+function ApproachDetail() {
+  return (
+    <div className="pt-10 lg:pt-12 pb-4 lg:pb-6 space-y-10 lg:space-y-8">
+      <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
+        Every output traces to verified source material. The system records what documents it examined, what relationships it identified, what reasoning steps it followed. When challenged, you provide proof — not explanation.
+      </p>
+      <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
+        Nothing leaves your control. Processing happens locally, under your physical custody. Privileged material never touches external servers. No cloud uploads, no API calls that expose attorney-client communications or work product.
+      </p>
+      <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
+        The system doesn't just search, it maps. When Sigra ingests the ESI from a document production, it builds comprehensive knowledge structures: entities, relationships, communication patterns, referenced materials. It identifies not only what exists in the record, but what should exist and what appears to be missing.
+      </p>
+      <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
+        And when it's time to show your work, you can — without showing your hand. The architecture separates analytical proof from document content, so independent parties can verify what was examined and how conclusions were reached without ever accessing the underlying privileged material.
+      </p>
+    </div>
+  );
+}
 import { ChevronDown } from 'lucide-react';
 
 interface ApproachSectionProps {
@@ -48,23 +69,21 @@ export function ApproachSection({ expandedSection, setExpandedSection }: Approac
                 transition={{ duration: 0.4, ease: 'easeInOut' }}
                 style={{ overflow: 'hidden' }}
               >
-                <div className="pt-10 lg:pt-12 pb-4 lg:pb-6 space-y-10 lg:space-y-8">
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-                    Every output traces to verified source material. The system records what documents it examined, what relationships it identified, what reasoning steps it followed. When challenged, you provide proof — not explanation.
-                  </p>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-                    Nothing leaves your control. Processing happens locally, under your physical custody. Privileged material never touches external servers. No cloud uploads, no API calls that expose attorney-client communications or work product.
-                  </p>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-                    The system doesn't just search, it maps. When Sigra ingests the ESI from a document production, it builds comprehensive knowledge structures: entities, relationships, communication patterns, referenced materials. It identifies not only what exists in the record, but what should exist and what appears to be missing.
-                  </p>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-                    And when it's time to show your work, you can — without showing your hand. The architecture separates analytical proof from document content, so independent parties can verify what was examined and how conclusions were reached without ever accessing the underlying privileged material.
-                  </p>
-                </div>
+                <ApproachDetail />
               </motion.div>
             )}
           </AnimatePresence>
+
+          {/* Same copy, never displayed, so the prerendered HTML carries it for
+              crawlers and non-JS clients. Rendered unconditionally and kept as
+              a plain sibling: the AnimatePresence panel above is untouched
+              original code, and nothing here mounts or unmounts while its
+              enter/exit animation is running. Shares ApproachDetail with the
+              panel so the two cannot drift apart. In the prerendered (always
+              collapsed) HTML the panel is absent, so the copy appears once. */}
+          <div style={{ display: 'none' }} aria-hidden="true">
+            <ApproachDetail />
+          </div>
         </motion.div>
       </div>
     </section>
