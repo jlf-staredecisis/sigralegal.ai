@@ -61,7 +61,7 @@ export function ForwardScope() {
                 fontWeight: 300
               }}
             >
-              Sigra Legal is the first vertical, not the platform itself. Discovery analysis, gap detection, privilege review, expert witness support — built on cryptographically verified infrastructure. Launch: Q2 2026.
+              Sigra Legal is the first vertical, not the platform itself. Discovery analysis, gap detection, privilege review, expert witness support — built on cryptographically verified infrastructure.
             </p>
 
             <p
