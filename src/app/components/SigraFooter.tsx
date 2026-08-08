@@ -30,8 +30,8 @@ export function SigraFooter() {
               <div className="mb-4 tracking-[0.2em] uppercase" style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.7rem', color: '#c4431a', fontWeight: 300 }}>
                 Contact
               </div>
-              <a href="mailto:access@sigra.legal" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.9rem', color: '#a8a29e', textDecoration: 'none', display: 'block', marginBottom: '0.5rem' }}>
-                access@sigra.legal
+              <a href="mailto:jlf@sigra.io" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.9rem', color: '#a8a29e', textDecoration: 'none', display: 'block', marginBottom: '0.5rem' }}>
+                jlf@sigra.io
               </a>
             </div>
 
