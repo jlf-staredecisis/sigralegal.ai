@@ -22,7 +22,7 @@ export function SigraFooter() {
                 SIGRA
               </div>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.9rem', color: '#a8a29e', lineHeight: 1.6, fontWeight: 300 }}>
-                Verification infrastructure for legal AI
+                Attested Intelligence™
               </p>
             </div>
 
