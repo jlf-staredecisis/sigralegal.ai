@@ -274,52 +274,6 @@ function TeamCredentialsContent() {
               ))}
             </ul>
           </div>
-
-          {/* Advisor 2 */}
-          <div>
-            <h4
-              className="mb-1"
-              style={{
-                fontFamily: "'Instrument Serif', serif",
-                fontSize: '1.25rem',
-                color: '#f5f2ed',
-                fontWeight: 400,
-                lineHeight: 1.3
-              }}
-            >
-              Professor Sanjam Garg — UC Berkeley
-            </h4>
-
-            <ul className="space-y-2 mt-4">
-              {[
-                'Associate Professor of Computer Science',
-                'ACM Doctoral Dissertation Award, Sloan Fellow',
-                'Cryptography and security/privacy applications',
-                'Best paper awards at CRYPTO and EUROCRYPT',
-                'Technical advisor on verification architecture'
-              ].map((item, index) => (
-                <li
-                  key={index}
-                  className="relative pl-6"
-                  style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: '0.9rem',
-                    color: '#d1cbc3',
-                    lineHeight: 1.7,
-                    fontWeight: 300
-                  }}
-                >
-                  <span
-                    className="absolute left-0"
-                    style={{ color: '#c4431a' }}
-                  >
-                    •
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </div>
     </>
