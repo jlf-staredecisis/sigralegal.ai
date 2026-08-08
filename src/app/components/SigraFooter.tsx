@@ -40,7 +40,7 @@ export function SigraFooter() {
                 Notice
               </div>
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.85rem', color: '#a8a29e', lineHeight: 1.6, fontWeight: 300 }}>
-                © 2026 Sigra Systems. All rights reserved.
+                © 2026 Sigra Technologies Inc. All rights reserved.
               </p>
             </div>
           </div>
