@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Header } from '../components/Header';
 import { BrandHero } from '../components/BrandHero';
 import { ProblemSection } from '../components/home/ProblemSection';
-import { WhyNowSection } from '../components/home/WhyNowSection';
 import { ApproachSection } from '../components/home/ApproachSection';
 import { DepthSelector, DepthMode } from '../components/DepthSelector';
 import { CapabilitiesSection } from '../components/home/CapabilitiesSection';
@@ -15,7 +14,6 @@ import { SigraFooter } from '../components/SigraFooter';
 export function HomePage() {
   const [depthMode, setDepthMode] = useState<DepthMode>('glance');
   const [problemExpanded, setProblemExpanded] = useState(false);
-  const [whyNowExpanded, setWhyNowExpanded] = useState(false);
   const [approachExpanded, setApproachExpanded] = useState<'overview' | 'approach' | null>(null);
 
   return (
@@ -28,7 +26,6 @@ export function HomePage() {
         setIsExpanded={setProblemExpanded}
       />
       
-      <WhyNowSection isExpanded={whyNowExpanded} setIsExpanded={setWhyNowExpanded} />
       <ApproachSection expandedSection={approachExpanded} setExpandedSection={setApproachExpanded} />
       
       {/* Depth Selection and Content */}
