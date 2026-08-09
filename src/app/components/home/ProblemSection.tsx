@@ -13,7 +13,7 @@ function ProblemDetail() {
         This is not an occasional problem. As Stanford RegLabs found, Lexis+AI and Westlaw CoCounsel hallucinate at 17% and 33%, respectively.
       </p>
       <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-        Think about that: the best that the "specialized AI tools" can do is err nearly one out of five times. And consumer-grade AI such as ChatGPT and Gemini are even worse. Much worse. This is why courts have issued approximately 1,000 sanctions orders--ranging from monetary penalties and State Bar referrals to outright dismissal--and that number is growing every day.
+        Think about that: the best that the "specialized AI tools" can do is err nearly one out of five times. And consumer-grade AI such as ChatGPT and Gemini are even worse. Much worse. Worldwide, generative AI has produced fake citations, fabricated quotes, and inaccurate arguments in nearly 2,000 court filings, which have resulted in orders imposing monetary sanctions, State bar referrals, and outright dismissal. That number continues to climb at an increasing rate.
       </p>
       <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
         But don't take our word for it. See for yourself: <a href="https://www.damiencharlotin.com/hallucinations/" target="_blank" rel="noopener noreferrer" style={{ color: '#c4431a', textDecoration: 'underline' }}>https://www.damiencharlotin.com/hallucinations/</a>.
