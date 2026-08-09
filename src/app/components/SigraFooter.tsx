@@ -42,6 +42,9 @@ export function SigraFooter() {
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.85rem', color: '#a8a29e', lineHeight: 1.6, fontWeight: 300 }}>
                 © 2026 Sigra Technologies Inc. All rights reserved.
               </p>
+              <p className="mt-2" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.85rem', color: '#a8a29e', lineHeight: 1.6, fontWeight: 300 }}>
+                Patent pending.
+              </p>
             </div>
           </div>
 
