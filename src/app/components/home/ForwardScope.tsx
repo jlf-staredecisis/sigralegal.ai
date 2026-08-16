@@ -49,7 +49,7 @@ export function ForwardScope() {
                 fontWeight: 300
               }}
             >
-              Verification is not adopted by choice. It is enforced by opposing counsel, by judges, by evidentiary rules. At the moment of challenge, unverifiable AI analysis becomes inadmissible. The work does not survive the first objection.
+              Verification is not adopted by choice. It is enforced by opposing counsel, by judges, by evidentiary rules. At the moment of challenge, unverifiable AI analysis is exposed — and often cannot survive the objection.
             </p>
 
             <p

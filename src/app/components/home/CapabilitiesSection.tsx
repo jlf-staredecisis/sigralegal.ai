@@ -15,7 +15,7 @@ export function CapabilitiesSection({ mode }: CapabilitiesSectionProps) {
       heading: 'Local processing under physical custody',
       glance: 'Local processing under physical custody. Privileged material never leaves your infrastructure.',
       practice: 'Discovery productions contain attorney-client communications, work product, and sealed court records. Uploading this material to commercial AI platforms creates disclosure risk, metadata leakage, and potential waiver arguments. Local processing eliminates the exposure.',
-      hood: 'All inference runs within Trusted Execution Environments (TEEs) using AMD SEV-SNP or Intel TDX hardware isolation. Data is encrypted in memory during processing. No network calls leave the enclave. Attestation reports prove the execution environment was unmodified.',
+      hood: 'All inference runs within Trusted Execution Environments (TEEs) using AMD SEV-SNP or Intel TDX hardware isolation. Data is encrypted in memory during processing. No document data leaves the enclave. Outbound connections are limited to hardware attestation. Attestation reports prove the execution environment was unmodified.',
       visual: <ContainmentVisual />
     },
     {
@@ -23,8 +23,8 @@ export function CapabilitiesSection({ mode }: CapabilitiesSectionProps) {
       label: 'Proof Transmission',
       heading: 'Verify conclusions without exposing privileged content',
       glance: 'Verify conclusions without exposing privileged content. Analytical proof separates from document content.',
-      practice: 'Each analytical operation generates a cryptographically signed audit entry containing the document hashes processed, the model version and parameters used, the query submitted, and the reasoning steps taken. This creates a self-authenticating record under FRE 902(13)/(14). Recipients verify the signature chain without accessing source documents.',
-      hood: 'The system generates Merkle tree commitments over input documents, binds them to TEE attestation reports, and chains each inference step into a verifiable log. Zero-knowledge selective disclosure allows proving specific properties of the analysis without revealing the underlying data.',
+      practice: 'Each analytical operation generates a cryptographically signed audit entry containing the document hashes processed, the model version and parameters used, the query submitted, and the reasoning steps taken. This is designed to support self-authentication under FRE 902(13) and (14). Recipients verify the signature chain without accessing source documents.',
+      hood: 'The system generates Merkle tree commitments over input documents, binds them to TEE attestation reports, and chains each inference step into a verifiable log. Cryptographic selective disclosure allows proving specific properties of the analysis without revealing the underlying data.',
       visual: <ProofTransmissionVisual />
     },
     {

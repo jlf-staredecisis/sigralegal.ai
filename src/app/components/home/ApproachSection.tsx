@@ -6,10 +6,10 @@ function ApproachDetail() {
   return (
     <div className="pt-10 lg:pt-12 pb-4 lg:pb-6 space-y-10 lg:space-y-8">
       <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-        Every output traces to verified source material. The system records what documents it examined, what relationships it identified, what reasoning steps it followed. When challenged, you provide proof — not explanation.
+        Every verified output traces to source material. Every factual and legal predicate is screened before the system treats a result as verified. The system records what documents it examined, what relationships it identified, what reasoning steps it followed. When challenged, you provide proof — not explanation.
       </p>
       <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-        Nothing leaves your control. Processing happens locally, under your physical custody. Privileged material never touches external servers. No cloud uploads, no API calls that expose attorney-client communications or work product.
+        Nothing leaves your control. Processing runs inside infrastructure you control — your own cloud tenancy or your own hardware — never ours. Privileged material never touches Sigra's servers and is never sent to any third-party AI service.
       </p>
       <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
         The system doesn't just search, it maps. When Sigra ingests the ESI from a document production, it builds comprehensive knowledge structures: entities, relationships, communication patterns, referenced materials. It identifies not only what exists in the record, but what should exist and what appears to be missing.

@@ -18,9 +18,11 @@ const isUrl = /^https?:\/\//.test(target)
 const PAGES = {
   '/': [
     ['Current legal AI cannot withstand cross examination', 'Problem heading (visible)'],
-    ['Stanford RegLabs', 'Problem section — COLLAPSED expandable'],
+    // No apostrophes in probes: they are HTML-escaped in the served markup.
+    ['AI-Assisted Research', 'Problem section — COLLAPSED expandable'],
+    ['J. Empirical Legal Stud', 'Problem section — study citation'],
     ['damiencharlotin.com', 'Problem section — COLLAPSED expandable'],
-    ['Every output traces to verified source material', 'Approach — COLLAPSED expandable'],
+    ['Every verified output traces to source material', 'Approach — COLLAPSED expandable'],
     ['Nothing leaves your control', 'Approach — COLLAPSED expandable'],
     ['Analysis can be independently verified by opposing experts', 'Capabilities — depth mode "glance"'],
     ['Every analytical outcome can be independently reproduced', 'Capabilities — depth mode "practice"'],
@@ -61,6 +63,15 @@ const FORBIDDEN = [
   ['Rule of Evidence 707', 'removed section'],
   ['Launch: Q2 2026', 'removed date claim'],
   ['Sigra Systems', 'superseded entity name'],
+  // Claims audit 2026-08-15, P1 — retired wording that must not return
+  ['Westlaw CoCounsel', 'P1 #1 — misnamed the product the study tested'],
+  ['one out of five times', 'P1 #2 — overstated the 17% figure'],
+  ['No cloud uploads', 'P1 #3 — conflicted with the deployment model'],
+  ['self-authenticating record under FRE', 'P1 #4 — stated a legal conclusion'],
+  ['becomes inadmissible', 'P1 #5 — overstated as certainty'],
+  ['Every output traces', 'P1 #6 — implied all output is verified'],
+  ['No network calls leave the enclave', 'P1 #8 — imprecise; attestation needs egress'],
+  ['Zero-knowledge selective disclosure', 'P1 #9 — term of art not met by current seal'],
 ]
 
 const HEAD = [

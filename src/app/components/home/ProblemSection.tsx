@@ -7,13 +7,13 @@ function ProblemDetail() {
   return (
     <div className="pt-10 lg:pt-12 pb-4 lg:pb-6 space-y-10 lg:space-y-8">
       <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-        Current legal AI tools hallucinate--meaning that they confidently create fake legal citations, generate imaginary quotations, get holdings wrong, and so on. And they insist that they're correct even if you happen to catch the error.
+        Current legal AI tools hallucinate--meaning that they confidently create fake legal citations, generate imaginary quotations, get holdings wrong, and so on. And they state the errors with the same confidence as the facts.
       </p>
       <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-        This is not an occasional problem. As Stanford RegLabs found, Lexis+AI and Westlaw CoCounsel hallucinate at 17% and 33%, respectively.
+        This is not an occasional problem. Lexis+ AI and Westlaw's AI-Assisted Research produce false or misleading answers roughly 17% and 33% of the time. (Magesh et al., 22 J. Empirical Legal Stud. 216 (2025).)
       </p>
       <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
-        Think about that: the best that the "specialized AI tools" can do is err nearly one out of five times. And consumer-grade AI such as ChatGPT and Gemini are even worse. Much worse. Worldwide, generative AI has produced fake citations, fabricated quotes, and inaccurate arguments in nearly 2,000 court filings, which have resulted in orders imposing monetary sanctions, State bar referrals, and outright dismissal. That number continues to climb at an increasing rate.
+        Think about that: the best that the "specialized AI tools" can do is err roughly one out of six times. And consumer-grade AI such as ChatGPT and Gemini are even worse. Much worse. Worldwide, generative AI has produced fake citations, fabricated quotes, and inaccurate arguments in nearly 2,000 court filings, which have resulted in orders imposing monetary sanctions, State bar referrals, and outright dismissal. That number continues to climb at an increasing rate.
       </p>
       <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: '#d1cbc3', lineHeight: 1.8, fontWeight: 300 }}>
         But don't take our word for it. See for yourself: <a href="https://www.damiencharlotin.com/hallucinations/" target="_blank" rel="noopener noreferrer" style={{ color: '#c4431a', textDecoration: 'underline' }}>https://www.damiencharlotin.com/hallucinations/</a>.
